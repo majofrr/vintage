@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watermelon Vibes 🍉</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Raleway:wght@300;700&display=swap');
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #FAE5D3;
+            color: #5D4037;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        header {
+            font-family: 'Dancing Script', cursive;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+        .moodboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            justify-content: center;
+            padding: 10px;
+        }
+        .image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 15px;
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s ease-in-out, filter 0.4s;
+            position: relative;
+        }
+        .image:hover {
+            transform: scale(1.1) rotate(-2deg);
+            filter: brightness(1.3) contrast(1.1);
+        }
+        .section {
+            padding: 40px;
+            margin-top: 40px;
+            border-radius: 30px;
+            border: 10px solid #FAE5D3;
+        }
+        .polaroid-section {
+            background-color: #F8C8DC;
+        }
+        .instax-section {
+            background-color: #BDE0FE;
+        }
+        .strip-section {
+            background-color: #FFD6A5;
+        }
+        .polaroid, .instax, .strip {
+            display: inline-block;
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+            margin: 10px;
+            transform: rotate(-3deg);
+            transition: transform 0.3s;
+        }
+        .polaroid:hover, .instax:hover, .strip:hover {
+            transform: rotate(3deg) scale(1.05);
+        }
+        .polaroid img, .instax img, .strip img {
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .floating-elements {
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            font-size: 2rem;
+            animation: float 3s infinite alternate ease-in-out;
+        }
+        .floating-elements:nth-child(2) {
+            top: 80%;
+            left: 90%;
+            animation-delay: 1s;
+        }
+        .floating-elements:nth-child(3) {
+            top: 50%;
+            left: 20%;
+            animation-delay: 2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes float {
+            from { transform: translateY(0); }
+            to { transform: translateY(-15px); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Watermelon Vibes 🍉</h1>
+        <p>Un verano eterno en imágenes, colores y recuerdos.</p>
+    </header>
+    
+    <div class="floating-elements">🌸</div>
+    <div class="floating-elements">🍉</div>
+    <div class="floating-elements">✨</div>
+
+    <section class="moodboard">
+        <div class="image" style="background-image: url('https://i.pinimg.com/736x/99/db/39/99db39a5103bb974d3febe8a0ab23177.jpg');"></div>
+        <div class="image" style="background-image: url('https://i.pinimg.com/474x/fd/30/62/fd3062f1694ab22e5afbd18c428b3b5f.jpg');"></div>
+        <div class="image" style="background-image: url('https://i.pinimg.com/474x/9b/a7/58/9ba7585f7969ec0485db7f1f41da7c31.jpg');"></div>
+        <div class="image" style="background-image: url('https://i.pinimg.com/474x/c5/45/4c/c5454cf62a560030d9cef355220700a8.jpg');"></div>
+    </section>
+    
+    <section class="section polaroid-section">
+        <h2>Polaroids</h2>
+        <div class="polaroid"><img src="https://i.pinimg.com/474x/ab/97/b1/ab97b17589df67c9c2fedb3cbfa2f482.jpg" alt="Polaroid"></div>
+        <div class="polaroid"><img src="https://i.pinimg.com/736x/fb/34/ae/fb34aeebd3526d4343bcdfcd3d21f95a.jpg" alt="Polaroid"></div>
+    </section>
+    
+    <section class="section instax-section">
+        <h2>Instax Memories</h2>
+        <div class="instax"><img src="https://i.pinimg.com/474x/2d/03/7a/2d037a484353032296bba04b8965612e.jpg" alt="Instax"></div>
+    </section>
+    
+    <section class="section strip-section">
+        <h2>Photo Strips</h2>
+        <div class="strip"><img src="https://source.unsplash.com/200x250/?film,strip" alt="Strip"></div>
+        <div class="strip"><img src="https://source.unsplash.com/200x250/?photo,booth" alt="Strip"></div>
+    </section>
+
+    <footer>
+        <p>Hecho con amor y nostalgia 🌞✨</p>
+    </footer>
+</body>
+</html>
